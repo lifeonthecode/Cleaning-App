@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+@theme inline {
+
+  /* next/font variables */
+  --font-vietnam: var(--font-vietnam);
+  --font-outfit: var(--font-outfit);
+  --bg-banner: url("/images/banner-bg.png");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-be-vietnam);
+}
+
+.swiper.service-swiper,
+.swiper.expert-team-slider {
+  padding-top: 40px;
+}
+
+
+.swiper.service-swiper>.swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
+.swiper.expert-team-slider>.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #36b864 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.swiper-slide.swiper-slide-next {
+  border: 3px solid #36b864 !important;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide.swiper-slide-next {
+    border: transparent !important;
+  }
+
+  .swiper-slide.swiper-slide-active {
+    border: 3px solid #36b864 !important;
+    border-radius: 20px;
+  }
+}
