@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Affordable from "@/components/Affordable";
 import Banner from "@/components/Banner";
 import ExpertTeam from "@/components/ExpertTeam";
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* EXPERT TEAM COMPONENT  */}
       <ExpertTeam/>
+
+      {/* ABOUT COMPONENT  */}
+      <About/>
 
     </div>
   );

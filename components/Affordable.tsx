@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Affordable = () => {
     return (
-        <div className="w-full flex items-center justify-center bg-white py-10 md:py-18.75 px-4 xl:px-0">
+        <div className="w-full flex items-center justify-center bg-white pt-10 md:py-18.75 px-4 xl:px-0">
             <div className="max-w-292.5 w-full mx-auto">
                 <div className="w-full flex flex-col md:flex-row md:justify-between items-center gap-10">
                     {/* LEFT SIDE WRAPPER  */}

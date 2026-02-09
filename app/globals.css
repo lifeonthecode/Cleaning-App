@@ -38,17 +38,17 @@ html {
 }
 
 
-.swiper-slide.swiper-slide-next {
+.swiper.expert-team-slider > .swiper-wrapper > .swiper-slide.swiper-slide-next {
   border: 3px solid #36b864 !important;
   border-radius: 20px;
 }
 
 @media (max-width: 768px) {
-  .swiper-slide.swiper-slide-next {
+  .swiper.expert-team-slider > .swiper-wrapper > .swiper-slide.swiper-slide-next {
     border: transparent !important;
   }
 
-  .swiper-slide.swiper-slide-active {
+  .swiper.expert-team-slider > .swiper-wrapper > .swiper-slide.swiper-slide-active {
     border: 3px solid #36b864 !important;
     border-radius: 20px;
   }
