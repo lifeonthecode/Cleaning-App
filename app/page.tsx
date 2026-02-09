@@ -3,6 +3,7 @@ import Affordable from "@/components/Affordable";
 import Banner from "@/components/Banner";
 import ExpertTeam from "@/components/ExpertTeam";
 import Navbar from "@/components/Navbar/Navbar";
+import OurPricing from "@/components/OurPricing";
 import Service from "@/components/Service";
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* ABOUT COMPONENT  */}
       <About/>
+
+      {/* OUR PRICING COMPONENT  */}
+      <OurPricing/>
 
     </div>
   );

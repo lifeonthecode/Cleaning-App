@@ -16,7 +16,7 @@ const aboutInfo: string[] = [
 const About = () => {
     return (
         <div className="w-full flex justify-center bg-white px-4 xl:px-0 pt-0 pb-10 md:pt-18.75 md:pb-18.75">
-            <div className="max-w-392.5 w-full mx-auto">
+            <div className="max-w-292.5 w-full mx-auto">
                 <div className="w-full flex flex-col-reverse md:flex-row xl:items-center justify-between gap-10">
                     {/* LEFT SIDE WRAPPER  */}
                     <div className="md:max-w-133.5 w-full min-h-105.5 h-full relative flex flex-col md:flex-row gap-8 md:gap-0">
