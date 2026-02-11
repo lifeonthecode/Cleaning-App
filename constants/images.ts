@@ -1,5 +1,6 @@
 // LOGO
 export const logo = "/logo/logo.svg";
+export const footerLogo = "/logo/footer-logo.svg"
 
 // ICONS
 export const icons = {
@@ -16,9 +17,6 @@ export const uiImages = {
   services3: "/images/services-3.jpg",
   affordable1: "/images/affordable-1.jpg",
   affordable2: "/images/affordable-2.jpg",
-  // expertTeam1: "/images/expert-team-1.png",
-  // expertTeam2: "/images/expert-team-2.png",
-  // expertTeam3: "/images/expert-team-3.png",
   ourCompany1: "/images/our-company-1.jpg",
   ourCompany2: "/images/our-company-2.jpg",
   bgPlan: "/images/bg-plan.png",
@@ -28,5 +26,8 @@ export const uiImages = {
   serviceNews3: "/images/service-news-3.jpg",
   expertTeam1: "/images/expert-team-1.png",
   expertTeam2: "/images/expert-team-2.png",
-  expertTeam4: "/images/expert-team-4.png"
+  expertTeam4: "/images/expert-team-4.png",
+  blog1: "/images/blog-1.jpg",
+  blog2: "/images/blog-2.jpg",
+  blog3: "/images/blog-3.jpg"
 };

@@ -1,8 +1,11 @@
 import About from "@/components/About";
 import Affordable from "@/components/Affordable";
 import Banner from "@/components/Banner";
+import Blog from "@/components/Blog";
+import Contact from "@/components/Contact";
 import ExpertTeam from "@/components/ExpertTeam";
 import Feedback from "@/components/Feedback";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import OurPricing from "@/components/OurPricing";
 import Service from "@/components/Service";
@@ -14,25 +17,38 @@ export default function Home() {
       <Navbar />
 
       {/* BANNER COMPONENT  */}
-      <Banner/>
+      <Banner />
 
       {/* SERVICE COMPONENT  */}
-      <Service/>
+      <Service />
 
       {/* AFFORDABLE COMPONENT  */}
-      <Affordable/>
+      <Affordable />
 
 
       {/* EXPERT TEAM COMPONENT  */}
-      <ExpertTeam/>
+      <ExpertTeam />
 
       {/* ABOUT COMPONENT  */}
-      <About/>
+      <About />
 
       {/* OUR PRICING COMPONENT  */}
-      <OurPricing/>
+      <OurPricing />
 
-      <Feedback/>
+
+      {/* FEEDBACK COMPONENT  */}
+      <Feedback />
+
+
+      {/* BLOG COMPONENT  */}
+      <Blog/>
+
+      {/* CONTACT COMPONENT  */}
+      <Contact/>
+
+      {/* FOOTER COMPONENT  */}
+      <Footer/>
+
 
     </div>
   );

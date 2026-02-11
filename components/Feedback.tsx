@@ -52,7 +52,7 @@ const Feedback = () => {
     return (
         <div className="w-full px-4 xl:px-4 md:pt-18.5  pb-10 md:pb-18.5 flex items-center justify-center bg-white">
             <div className="max-w-292.5 w-full mx-auto">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-6 xl:gap-10">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-6 xl:gap-10">
                     {/* LEFT SIDE WRAPPER  */}
                     <div className="max-w-125 w-full">
                         <h2 className="text-3xl lg:text-[44px] text-[#111d15] font-semibold capitalize mb-6">Feedback About Their Experience With Us</h2>
@@ -102,13 +102,7 @@ const Feedback = () => {
                                     swiper.params.navigation!.nextEl = nextRef.current;
                                 }
                             }}
-
-                            // breakpoints={{
-                            //     1024: { slidesPerView: 3 },
-                            //     768: { slidesPerView: 2 },
-                            //     540: { slidesPerView: 1 },
-                            // }}
-                            className='swiper expert-team-slider'
+                            className='swiper feedback-slider'
                         >
                             {
                                 slides?.map((item, index) => (
