@@ -122,7 +122,7 @@ const Feedback = () => {
                                                 <div className="flex items-center gap-2 mb-4">
                                                     {
                                                         [...Array(item?.rating)]?.map((_, index) => (
-                                                            <span><Star color='#ff9800' size={'1rem'} /></span>
+                                                            <span key={index}><Star color='#ff9800' size={'1rem'} /></span>
                                                         ))
                                                     }
                                                 </div>

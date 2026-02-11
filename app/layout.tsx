@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import{Be_Vietnam_Pro, Outfit} from "next/font/google"
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 // BE VIETNAM FONT 
 const beVietnam = Be_Vietnam_Pro({
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${beVietnam.variable} ${outfit.variable} antialiased`}
       >
         {children}
+        <ToastContainer position="bottom-right" />
       </body>
     </html>
   );

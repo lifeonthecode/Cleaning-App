@@ -1,4 +1,7 @@
+'use client'
+import axios from "axios";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { toast } from "react-toastify";
 
 interface Props {
     contact_name: string,
@@ -10,17 +13,17 @@ const contactInfos: Props[] = [
     {
         contact_name: 'Call us',
         contact: "+(08) 255 201 888",
-        icon: <Phone/>
+        icon: <Phone />
     },
     {
         contact_name: 'Email Now',
         contact: "hollo@procleaning.com",
-        icon: <Mail/>
+        icon: <Mail />
     },
     {
         contact_name: 'Address',
         contact: "7510, Brand Tower, New York, USA",
-        icon: <MapPin/>
+        icon: <MapPin />
     },
 ];
 
@@ -28,6 +31,32 @@ const contactInfos: Props[] = [
 
 
 const Contact = () => {
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        try {
+            e.preventDefault();
+            const form = e.currentTarget;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            const access_token = process.env.NEXT_PUBLIC_ACCESS_KEY;
+            const web3FormsUrl = process.env.NEXT_PUBLIC_WEB3FORMS_URL!;
+            const response = await axios.post(web3FormsUrl, {
+                access_key: access_token,
+                ...data,
+            });
+            if (response.data.success) {
+                toast.success('Form submitted successfully!');
+                // FORM CLEAR 
+                form.reset();
+            }else {
+                toast.error(response.data.message || "Submission failed!")
+            }
+        } catch (er: any) {
+            const errorMessage = er.response?.data?.message || "Something went wrong";
+            toast.error('Submission Error:', errorMessage);
+        }
+    }
+
     return (
         <div id="contact" className="w-full bg-white flex items-center justify-center px-4 xl-px-0 pt-10 pb-10 md:pt-18.5 md:pb-18.5">
             <div className="max-w-292.5 w-full mx-auto">
@@ -59,10 +88,12 @@ const Contact = () => {
                         </div>
 
                         {/* FORM CONTAINER  */}
-                        <form className="w-full flex flex-col gap-8">
+                        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-8">
+
                             <input type="text" name="name" id="name" className="w-full h-14 bg-white border border-[#f3f3f3] rounded-sm pl-5 outline-0 text-base text-[#111d15] font-normal" placeholder="Name" />
-                            <input type="email" name="email" id="email" className="w-full h-14 bg-white border border-[#f3f3f3] rounded-sm pl-5 outline-0 text-base text-[#111d15] font-normal"  placeholder="Email" />
-                            <textarea name="message" id="message" className="w-full h-25 bg-white border border-[#f3f3f3] rounded-sm pt-4 pl-5 outline-0 text-base text-[#111d15] font-normal"  placeholder="Message"></textarea>
+                            
+                            <input type="email" name="email" id="email" className="w-full h-14 bg-white border border-[#f3f3f3] rounded-sm pl-5 outline-0 text-base text-[#111d15] font-normal" placeholder="Email" />
+                            <textarea name="message" id="message" className="w-full h-25 bg-white border border-[#f3f3f3] rounded-sm pt-4 pl-5 outline-0 text-base text-[#111d15] font-normal" placeholder="Message"></textarea>
                             <button type="submit" className="max-w-38.75 w-full h-10.5 bg-[#36b864] rounded-md py-3 px-6 text-white text-base font-outfit font-medium capitalize cursor-pointer">Send Message</button>
                         </form>
                     </div>
