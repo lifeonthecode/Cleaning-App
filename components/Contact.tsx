@@ -38,7 +38,7 @@ const Contact = () => {
             const form = e.currentTarget;
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-            const access_token = process.env.NEXT_PUBLIC_ACCESS_KEY;
+            const access_token = process.env.NEXT_PUBLIC_ACCESS;
             const web3FormsUrl = process.env.NEXT_PUBLIC_WEB3FORMS_URL!;
             const response = await axios.post(web3FormsUrl, {
                 access_key: access_token,
